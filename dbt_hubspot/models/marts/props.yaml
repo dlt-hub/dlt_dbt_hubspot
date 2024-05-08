@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: dim_hubspot__deal
+    columns:
+      - name: deal_id
+        tests:
+          - not_null
+          - unique
+
+      - name: owner_id
+        tests:
+          - not_null
+
+      - name: pipeline_id
+        tests:
+          - not_null

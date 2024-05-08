@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "dlt-hubspot"
+version = "0.1.0"
+description = "dlt hubspot source packages with dbt transformation models"
+authors = ["Violetta Mischechkina <violetta@dlthub.com>"]
+readme = "README.md"
+packages = [{include = "dlt_hubspot"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10, <3.13"
+dlt = {extras = ["duckdb","s3","snowflake"], version = "=0.4.5"}
+dbt-core = "^1.7.8"
+dbt-duckdb = "^1.7.2"
+dbt-snowflake = "^1.7.2"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.0.0"
+bandit = "^1.7.4"
+flake8-bugbear = "^22.12.6"
+flake8-tidy-imports = "^4.8.0"
+flake8-encodings = "^0.5.0.post1"
+flake8-builtins = "^2.1.0"
+black = "^23.3.0"
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+include = '.*py$'

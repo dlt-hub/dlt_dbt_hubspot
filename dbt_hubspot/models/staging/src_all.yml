@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: hubspot
+    schema: '{{ var ("schema") }}'
+    tables:
+      - name: companies
+      - name: deals
+      - name: contacts

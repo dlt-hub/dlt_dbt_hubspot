@@ -1,0 +1,75 @@
+# put your configuration values here
+
+[runtime]
+log_level="WARNING"  # the system log level of dlt
+# use the dlthub_telemetry setting to enable/disable anonymous usage data reporting, see https://dlthub.com/docs/telemetry
+dlthub_telemetry = true
+
+[sources.hubspot.resources]
+resources = [
+    "contacts",
+    "companies",
+    "deals",
+]
+
+[[sources.hubspot.deals.properties]]
+name = "id"
+alias = "deal_id"
+
+[[sources.hubspot.deals.properties]]
+name = "pipeline"
+alias = "pipeline_id"
+
+[[sources.hubspot.deals.properties]]
+name = "dealstage"
+alias = "stage_id"
+
+[[sources.hubspot.deals.properties]]
+name = "dealname"
+alias = "deal_name"
+
+[[sources.hubspot.companies.properties]]
+name = "id"
+alias = "company_id"
+
+[[sources.hubspot.companies.properties]]
+name = "hs_parent_company_id"
+
+[[sources.hubspot.companies.properties]]
+name = "is_deleted"
+alias = "_is_deleted"
+
+[[sources.hubspot.companies.properties]]
+name = "hs_lastmodifieddate"
+alias = "last_modified_date"
+
+[[sources.hubspot.companies.properties]]
+name = "name"
+alias = "company_name"
+
+[[sources.hubspot.contacts.properties]]
+name = "is_deleted"
+alias = "_is_deleted"
+
+[[sources.hubspot.contacts.properties]]
+name = "id"
+alias = "contact_id"
+
+[[sources.hubspot.contacts.properties]]
+name = "hs_lastmodifieddate"
+alias = "last_modified_date"
+
+[[sources.hubspot.contacts.properties]]
+name = "email"
+
+[[sources.hubspot.contacts.properties]]
+name = "firstname"
+alias = "first_name"
+
+[[sources.hubspot.contacts.properties]]
+name = "lastname"
+alias = "last_name"
+
+[[sources.hubspot.contacts.properties]]
+name = "jobtitle"
+alias = "job_title"
